@@ -1,18 +1,18 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[3]:
+# In[2]:
 
 
 import unittest
-from Test_bot_endgame import *
-#from TestModule2 import TestSub
+from Test_bot import *
+from Test_endgame import *
 def my_suite():
     suite = unittest.TestSuite()
     result = unittest.TestResult()
     #add for each of the py files created with test case
     suite.addTest(unittest.makeSuite(Testbot))
-#    suite.addTest(unittest.makeSuite(TestSub))
+    suite.addTest(unittest.makeSuite(Testendgame))
     #runner = unittest.TextTestRunner()
     return suite
     
@@ -21,7 +21,7 @@ def my_suite():
 #my_suite()
 
 
-# In[5]:
+# In[3]:
 
 
 if __name__ == '__main__':

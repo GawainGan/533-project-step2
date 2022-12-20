@@ -19,6 +19,12 @@ class TestUser(unittest.TestCase): # test class
             print('Tear Down')
 
       
+      def get_price_of_stock_buy_list(self):
+            return self.info['total_stock_price_list'][0:self.len_range]
+      
+      def get_volume(self):
+            return self.info['volume_list'][0:self.len_range]
+
       def test_get_expense_list(self): # test case
             Stock1 = Stock()
             U1 = User(Stock1)
@@ -26,14 +32,11 @@ class TestUser(unittest.TestCase): # test class
             U1.process()
             
             out_expense = U1.get_expense_list()
-            sum_expense = sum(out_expense)
             print(sum(out_expense))
             
             testval = (sum(out_expense) <= 10000.0)
+            
             self.assertTrue(testval,"Expense > 10000")
-            self.assertIn(out_expense[0], out_expense)
-            self.assertIsNotNone(out_expense)
-            self.assertEqual(sum_expense, sum(out_expense))
 
       @classmethod
       def tearDownClass(cls):

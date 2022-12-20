@@ -26,14 +26,10 @@ class TestUser(unittest.TestCase): # test class
             U1.process()
             
             out_expense = U1.get_expense_list()
-            sum_expense = sum(out_expense)
             print(sum(out_expense))
             
             testval = (sum(out_expense) <= 10000.0)
             self.assertTrue(testval,"Expense > 10000")
-            self.assertIn(out_expense[0], out_expense)
-            self.assertIsNotNone(out_expense)
-            self.assertEqual(sum_expense, sum(out_expense))
 
       @classmethod
       def tearDownClass(cls):

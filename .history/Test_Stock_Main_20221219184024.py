@@ -13,15 +13,15 @@ class TestStock(unittest.TestCase): # test class
 
       def test_high_price(self):
             self.high_price_list = [20,30,40]
-            self.assertEqual(self.high_price_list, [20,30,40])
+            self.assertEqual(self.get_high_price(), self.high_price_list)
             
       def test_low_price(self):
             self.low_price_list = [5,10,15]
-            self.assertEqual(self.low_price_list, [5,10,15])
+            self.assertEqual(self.get_low_price(), self.low_price_list)
             
       def test_vol(self):
             self.volume_list = [1,2,3]
-            self.assertEqual(self.volume_list, [1,2,3])
+            self.assertEqual(self.get_volume(), self.volume_list)
       
       def test_size(self):
             self.n = 5

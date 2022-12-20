@@ -15,7 +15,6 @@ def my_suite():
     result = unittest.TestResult()
     #add for each of the py files created with test case
     suite.addTest(unittest.makeSuite(TestStock))
-    suite.addTest(unittest.makeSuite(TestUser))
     suite.addTest(unittest.makeSuite(Testbot))
     suite.addTest(unittest.makeSuite(Testendgame))
     #runner = unittest.TextTestRunner()

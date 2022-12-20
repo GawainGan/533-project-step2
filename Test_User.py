@@ -2,6 +2,7 @@ import unittest
 
 from main_package.Stock_main import *
 from sub_package.User import *
+from main_package.Buy import *
 
 class TestUser(unittest.TestCase): # test class
       
@@ -42,6 +43,8 @@ class TestUser(unittest.TestCase): # test class
             # check relevant class types
             self.assertIsInstance(Stock1, Stock, message)
             self.assertIsInstance(U1, User, message)
+            self.assertTrue(Buy.check_the_input_Y_N("Y"))
+            self.assertFalse(Buy.check_the_input_Y_N("N"))
 
       @classmethod
       def tearDownClass(cls):

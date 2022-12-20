@@ -30,7 +30,7 @@ class TestUser(unittest.TestCase): # test class
             self.volume_list = [random.randint(1, 200) for i in range(int(self.n))]
             self.assertEqual(self.n , len(self.high_price_list))
             self.assertEqual(self.n , len(self.low_price_list))
-            self.assertEqual(self.n , 4) # it will has error
+            self.assertEqual(self.n , len(self.volume_list))
             
             
             

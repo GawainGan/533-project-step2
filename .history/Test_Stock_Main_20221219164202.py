@@ -23,15 +23,7 @@ class TestUser(unittest.TestCase): # test class
             self.volume_list = [1,2,3]
             self.assertEqual(self.get_volume, self.volume_list)
       
-      def test_size(self):
-            self.n = 5
-            self.high_price_list = [random.randint(201, 500) for i in range(int(self.n))]
-            self.low_price_list = [random.randint(50, 200) for i in range(int(self.n))]
-            self.volume_list = [random.randint(1, 200) for i in range(int(self.n))]
-            self.assertEqual(self.n , len(self.high_price_list))
-            self.assertEqual(self.n , len(self.low_price_list))
-            self.assertEqual(self.n , 4) # it will has error
-            
+      def test_In(self):
             
             
       def tearDown(self):
